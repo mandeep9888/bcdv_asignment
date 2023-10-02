@@ -1,7 +1,5 @@
 # BCDV 4028 Assignment
 
-Foobar is a Python library for dealing with word pluralization.
-
 ### Step 1
 
 Setup a local ganache network with truffle and deploy TokanA and Bridge A contract onto the local ganache network
