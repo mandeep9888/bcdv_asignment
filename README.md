@@ -49,6 +49,16 @@ transfer token over the bridge network
 - Transfer tokens
 - Wallet A balance is reduced to `999999999999950000000000`
 
+# lab 3
+
+[Lending Contract ](https://github.com/mandeep9888/bcdv_asignment/blob/2a0a4ee520962c5dbd2b2f5486891e247a69335c/contracts/LendingContract.sol)
+
+![Unit test for Lending contract](https://github.com/mandeep9888/bcdv_asignment/blob/2a0a4ee520962c5dbd2b2f5486891e247a69335c/lendingContractunitTest.png).
+
+
+![Simulation test for Lending contract](https://github.com/mandeep9888/bcdv_asignment/blob/2a0a4ee520962c5dbd2b2f5486891e247a69335c/lendingContractSimulationTest.png).
+
+
 # lab 5
 
 - Add sepolia testnet fund the account and add it to chainlink VRF website
