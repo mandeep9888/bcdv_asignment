@@ -3,11 +3,13 @@
 ### Step 1
 
 Setup a local ganache network with truffle and deploy TokanA and Bridge A contract onto the local ganache network
+
 ![Token A and Bridge A contract deployments ](https://github.com/mandeep9888/bcdv_asignment/blob/20e4ca3631d30ef8f451009e155f2474602aeffc/truffleMigrate_tokenA_bridgeA.png).
 
 ### step 2
 
 Setup a sepolia network with truffle and deploy TokanB and Bridge B contract onto the Sepolia test Network
+
 ![Token B and Bridge B contract deployments ](https://github.com/mandeep9888/bcdv_asignment/blob/20e4ca3631d30ef8f451009e155f2474602aeffc/truffleMigrate_sepolia_tokenB_bridgeB.png).
 
 ### step 3
@@ -32,7 +34,7 @@ Bridge B address : ```0x10e600ca0E7Ee4F4C7314EdA757187E937A08F16```
 
 ### Step 5
 
-Run [Demo](https://github.com/mandeep9888/bcdv_asignment/blob/20e4ca3631d30ef8f451009e155f2474602aeffc/script/demo.js) Script add bridges to one another and transfer tokens over bridges
+Run [Demo Script](https://github.com/mandeep9888/bcdv_asignment/blob/20e4ca3631d30ef8f451009e155f2474602aeffc/script/demo.js) add bridges to one another and transfer tokens over bridges
 
 ### step 6 
 
