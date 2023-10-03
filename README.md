@@ -55,9 +55,40 @@ transfer token over the bridge network
 
 ![Unit test for Lending contract](https://github.com/mandeep9888/bcdv_asignment/blob/2a0a4ee520962c5dbd2b2f5486891e247a69335c/lendingContractunitTest.png).
 
-
 ![Simulation test for Lending contract](https://github.com/mandeep9888/bcdv_asignment/blob/2a0a4ee520962c5dbd2b2f5486891e247a69335c/lendingContractSimulationTest.png).
 
+# lab 3 part II 
+
+Ganache-time-traveller is an Ethereum development tool Ganache plugin. It enables developers to modify the blockchain's timestamp and do time-based tests. This is especially useful for testing smart contracts with time-dependent behavior, such as token vesting, time locks, or voting systems where certain actions can only be executed after a specific amount of time has passed.
+
+Here's an example of how to use ganache-time-traveller:
+Assume you're putting a token vesting smart contract to the test. The contract distributes vested tokens to users on a set timetable, and you want to test the contract's behavior when tokens should be distributed at a later date.
+In your tests, you can use ganache-time-traveller to simulate the passage of time and test the release of vested tokens at a specific future timestamp:
+ ```
+const TokenVesting = artifacts.require("TokenVesting");
+const { increaseTime } = require("ganache-time-traveller");
+ 
+contract("TokenVesting", (accounts) => {
+    it("should release vested tokens at the specified time", async () => {
+        const beneficiary = accounts[1];
+        const releaseTime = Math.floor(Date.now() / 1000) + 3600; // 1 hour in the future
+        const vestedAmount = web3.utils.toWei("1000", "ether");
+ 
+        const vestingContract = await TokenVesting.new(beneficiary, releaseTime, vestedAmount);
+ 
+        // Fast forward time by 1 hour
+        await increaseTime(3600);
+ 
+        // Call the releaseTokens function to release the tokens
+        await vestingContract.releaseTokens({ from: beneficiary });
+ 
+        // Assert that tokens have been released to the beneficiary
+        // Write your assertions here
+    });
+});
+
+```
+IncreaseTime(3600) is used in this example to forward the blockchain's timestamp by one hour, imitating the circumstance in which the release time has passed and tokens are released to the beneficiary.
 
 # lab 5
 
